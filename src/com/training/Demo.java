@@ -2,7 +2,7 @@ package com.training;
 
 import java.util.Scanner;
 
-public class Customer {
+public class Demo {
 
     public static void main(String[] args) {
 
