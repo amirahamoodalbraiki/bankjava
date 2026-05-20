@@ -1,11 +1,14 @@
 package com.training;
 
+
+//Enapsulation 
 public class User {
 
     // Attributes
+	// instance variables
     private String userId;
     private String userName;
-    private String useEmail;
+    private String userEmail;
 
     // Getter for userId
     public String getUserId() {
@@ -29,11 +32,11 @@ public class User {
 
     // Getter for useEmail
     public String getUseEmail() {
-        return useEmail;
+        return userEmail;
     }
 
     // Setter for useEmail
     public void setUseEmail(String useEmail) {
-        this.useEmail = useEmail;
+        this.userEmail = useEmail;
     }
 }
