@@ -31,7 +31,7 @@ public class Customer {
             sc.nextLine();
 
             System.out.println
-            ("Customer Details -> Name: "+ customerFirstName + " "+ customerLastName+ ", Age: " + customerAge);
+            ("Customer Detailss -> Name: "+ customerFirstName + " "+ customerLastName+ ", Age: " + customerAge);
 
             for(int j=0; j<3;j++) {
             	System.out.println("Number of iteration:" +j+1);
@@ -40,6 +40,7 @@ public class Customer {
             do {
             	System.out.println("inside do while loop");
             	k++;
+            	
             }while(k<3);
             
             
