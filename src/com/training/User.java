@@ -1,34 +1,39 @@
 package com.training;
 
 public class User {
-	//Attributes
-	private String userId;
-	private String userName;
-	private String useEmail;
 
-	
-		//Behavior
-	//Setter method
-	public String getUserName() {
-		return userName;
-	}
+    // Attributes
+    private String userId;
+    private String userName;
+    private String useEmail;
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    // Getter for userId
+    public String getUserId() {
+        return userId;
+    }
 
-	public String getUseEmail() {
-		return useEmail;
-	}
+    // Setter for userId
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
-	public void setUseEmail(String useEmail) {
-		this.useEmail = useEmail;
-	}
+    // Getter for userName
+    public String getUserName() {
+        return userName;
+    }
 
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	
+    // Setter for userName
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-	}
+    // Getter for useEmail
+    public String getUseEmail() {
+        return useEmail;
+    }
 
+    // Setter for useEmail
+    public void setUseEmail(String useEmail) {
+        this.useEmail = useEmail;
+    }
+}
