@@ -23,5 +23,11 @@ public class SavingsAccount extends Account {
         System.out.println("Interest Rate: " + interestRate + "%");
 
     }
+    
+    public void addIntrest() {
+    	double interest= (balance *interestRate)/100;
+    	balance =+interest;
+    	System.out.println(interest+ "interest added to the balance");
+    }
 
 }
