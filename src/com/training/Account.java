@@ -1,3 +1,5 @@
+package com.training;
+
 class Account {
 
     int accountNumber;
