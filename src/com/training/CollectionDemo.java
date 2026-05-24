@@ -1,7 +1,10 @@
 package com.training;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -24,7 +27,8 @@ public class CollectionDemo {
 	}
 		
 		
-		Set<User>userSet = new TreeSet<>();
+		Set<User>userSet = new TreeSet<>(new NameComparator());
+		//List<User>userList = new ArrayList<>();
 		User user1 = new User("A101","Gaith","abc@maol.com");
 		User user2 = new User("A102","Anwar","sdf@maol.com");
 		User user3 = new User("A103","Ayuub","gjf@maol.com");
@@ -35,10 +39,10 @@ public class CollectionDemo {
 		userSet.add(user2);
 		userSet.add(user3);
 		userSet.add(user4);
-		userSet.add(user5);
+		//userSet.add(user5);
 
 		
-		
+		//Collections.sort(userList, new NameComparator());
 		for(User user:userSet) {
 			System.out.println(user);
 		}
