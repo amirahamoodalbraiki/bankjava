@@ -2,11 +2,12 @@ package com.training;
 
 class Account {
 
-    int accountNumber;
 
-    String customerName;
+  protected  int accountNumber;
 
-    double balance;
+  protected String customerName;
+
+  protected double balance;
 
     // Constructor
 
@@ -19,6 +20,31 @@ class Account {
         this.balance = balance;
 
     }
+    
+
+    public int getAccountNumber() {
+  		return accountNumber;
+  	}
+
+  	public void setAccountNumber(int accountNumber) {
+  		this.accountNumber = accountNumber;
+  	}
+
+  	public String getCustomerName() {
+  		return customerName;
+  	}
+
+  	public void setCustomerName(String customerName) {
+  		this.customerName = customerName;
+  	}
+
+  	public double getBalance() {
+  		return balance;
+  	}
+
+  	public void setBalance(double balance) {
+  		this.balance = balance;
+  	}
 
     // Deposit Method
 
@@ -50,13 +76,14 @@ class Account {
 
     // Display Balance
 
-    void displayBalance() {
+  public double displayBalance() {
 
-        System.out.println("Account Number: " + accountNumber);
+      //  System.out.println("Account Number: " + accountNumber);
 
-        System.out.println("Customer Name: " + customerName);
+       // System.out.println("Customer Name: " + customerName);
 
-        System.out.println("Balance: " + balance);
+     //   System.out.println("Balance: " + balance);
+		return accountNumber;
 
     }
 
