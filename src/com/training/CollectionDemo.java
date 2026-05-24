@@ -2,9 +2,12 @@ package com.training;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -46,6 +49,16 @@ public class CollectionDemo {
 		for(User user:userSet) {
 			System.out.println(user);
 		}
+		Map<Integer,String> namesMap =  new HashMap<>();
+		namesMap.put(101, "Sara");
+		namesMap.put(102, "Ibrahimra");
+		namesMap.put(103, "Sayyed");
+		namesMap.put(104, "Zubaida");
 		
+		System.out.println(namesMap.get(103));
+		
+		for(Entry<Integer,String> entry:namesMap.entrySet()) {
+			System.out.println(entry.getKey()+":"+entry.getValue());
+		}
 	}
 }
