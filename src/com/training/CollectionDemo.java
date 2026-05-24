@@ -3,6 +3,7 @@ package com.training;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
 
 
 public class CollectionDemo {
@@ -23,7 +24,7 @@ public class CollectionDemo {
 	}
 		
 		
-		Set<User>userSet = new HashSet<>();
+		Set<User>userSet = new TreeSet<>();
 		User user1 = new User("A101","Gaith","abc@maol.com");
 		User user2 = new User("A102","Anwar","sdf@maol.com");
 		User user3 = new User("A103","Ayuub","gjf@maol.com");
@@ -41,16 +42,6 @@ public class CollectionDemo {
 		for(User user:userSet) {
 			System.out.println(user);
 		}
-
-
-		
-		
-		
-
-		
-		
-		
-		
 		
 	}
 }
