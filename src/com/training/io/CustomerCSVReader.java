@@ -28,6 +28,8 @@ public class CustomerCSVReader {
 			String[] data = line.split(",");
 			customer Customer = new customer(data[0],data[1],data[2],data[3]);
 			System.out.println(Customer);
+			bw.write(data[0]+","+data[1]+","+data[2]+","+data[3]);
+			
 		}
 		br.readLine();
 	}
@@ -40,7 +42,8 @@ public class CustomerCSVReader {
 	finally {
 		file.close();
 		br.close();
-			}
+		filew.close();
+		bw.close();			}
 		
 	}
 }
