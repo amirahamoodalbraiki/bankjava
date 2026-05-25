@@ -9,16 +9,20 @@ import java.io.IOException;
 
 public class CustomerCSVReader {
 	public static void main(String[] args) throws IOException {
-		FileReader file = null;
-		BufferedReader br = null;
-		FileWriter filew= null;
-		BufferedWriter bw = null;
-		try {
-		
-		file = new FileReader("customer.csv");
-		br = new BufferedReader(file);
-		filew = new FileWriter("male_customer.csv");
-		bw = new BufferedWriter(filew);
+//		FileReader file = null;
+//		BufferedReader br = null;
+//		FileWriter filew= null;
+//		BufferedWriter bw = null;
+		try (BufferedReader br= new BufferedReader
+				(new FileReader("customer.csv"));
+				BufferedWriter bw = new BufferedWriter
+						(new FileWriter("male_customer1.csv")))
+		{
+//		
+//		file = new FileReader("customer.csv");
+//		br = new BufferedReader(file);
+//		filew = new FileWriter("male_customer.csv");
+//		bw = new BufferedWriter(filew);
 		bw.write("customer_id, customer_name, gender, city");
 		bw.newLine();
 		br.readLine();
@@ -28,8 +32,10 @@ public class CustomerCSVReader {
 			String[] data = line.split(",");
 			customer Customer = new customer(data[0],data[1],data[2],data[3]);
 			System.out.println(Customer);
+			if(data[2].equalsIgnoreCase("male")) {
 			bw.write(data[0]+","+data[1]+","+data[2]+","+data[3]);
 			bw.newLine();
+			}
 			
 		}
 		br.readLine();
@@ -40,12 +46,20 @@ public class CustomerCSVReader {
 		e.printStackTrace();
 	}
 		
-	finally {
-		file.close();
-		br.close();
-		filew.close();
-		//bw.close();			
-		}
+//		finally {
+//
+//            if (file != null)
+//                file.close();
+//
+//            if (br != null)
+//                br.close();
+//
+//            if (bw != null)
+//                bw.close(); // IMPORTANT FIX
+//
+//            if (filew != null)
+//                filew.close();
+//		}
 		
 	}
 }
