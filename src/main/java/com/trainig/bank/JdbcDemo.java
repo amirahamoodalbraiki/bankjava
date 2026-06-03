@@ -21,7 +21,14 @@ public class JdbcDemo {
 				PreparedStatement pstmt= conn.prepareStatement(query)){
 			pstmt.setDouble(1,800);
 			pstmt.setString(2,"Deposit");
-				ResultSet rs =pstmt.executeQuery();
+			
+			
+			
+			
+			
+			try(ResultSet rs =pstmt.executeQuery()){
+				
+			
 			//Statement stmt= conn.createStatement() ;
 			
 			//ResultSet rs=stmt.executeQuery("select * from transaction " 
@@ -31,6 +38,7 @@ public class JdbcDemo {
 					while(rs.next()) {
 						System.out.println("Transaction ID: "+rs.getInt("trans_id")
 						+ "-" +"Transaction Amount:" +rs.getDouble("trans_amount"));
+					}
 			}
 			
 		}
@@ -41,3 +49,26 @@ public class JdbcDemo {
 	}
 
 }
+
+
+
+//Create a users table in your database with user_id, user_name and password field
+// insert values using java code
+//then try to login with user_name and password
+//if credential matches then show a message "successfully logged in!"
+//else show "Incorrect credentials"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
